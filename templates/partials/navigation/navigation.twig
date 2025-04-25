@@ -1,0 +1,14 @@
+<div x-data="{ mobileMenuOpen: false, isTop: true,
+        navTextColor: 'text-gray-700', // Default colour for non-home pages or home page when scrolled
+        logo: '{{ optimized_img_path }}/logos/wazoku_nostrap_dark.svg', // Default logo for non-home pages or home page when scrolled
+        updateHeader() {
+            this.isTop = window.pageYOffset <= 1;
+        }
+    }"
+    x-init="updateHeader()"
+    @scroll.window="updateHeader()"
+    x-bind:class="{'bg-transparent': !isTop, 'bg-transparent': isTop}"
+    class="fixed top-0 z-20 w-full transition-all duration-500">
+    {% include "/partials/navigation/navigation-desktop.twig" %}
+    {% include "/partials/navigation/navigation-mobile.twig" %}
+</div>

@@ -19,3 +19,7 @@ Timber::$dirname = ['templates'];
 
 // Include core theme files
 require_once get_template_directory() . '/inc/enqueue.php';
+require_once get_template_directory() . '/inc/class-magnus-site.php';
+
+// Initialize the theme
+new Magnus_Site();

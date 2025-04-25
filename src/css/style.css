@@ -2,10 +2,29 @@
 
 /* Custom base styles */
 @layer base {
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Urbanist', sans-serif;
-    }
-    body {
-        font-family: 'Work Sans', sans-serif;
-    }
+  .skip-link {
+    background: #ff6e00;
+    color: #fff;
+    font-weight: 700;
+    left: 50%;
+    padding: 4px;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+  }
+
+  .skip-link:focus {
+    transform: translateY(0%);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Urbanist", sans-serif;
+  }
+  body {
+    font-family: "Work Sans", sans-serif;
+  }
 }

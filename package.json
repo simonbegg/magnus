@@ -1,0 +1,30 @@
+{
+  "name": "magnus",
+  "version": "1.0.0",
+  "description": "Modern WordPress starter theme with Timber and Tailwind CSS",
+  "type": "module",
+  "scripts": {
+    "dev:css": "postcss src/css/style.css -o dist/css/main.min.css --watch",
+    "dev:js": "esbuild src/js/main.js --bundle --outfile=dist/js/main.js --watch",
+    "dev:images": "node scripts/optimize-images.js --watch",
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:js\" \"npm run dev:images\" \"browser-sync start --proxy magnus.local --files 'dist/**/*.css, dist/**/*.js, **/*.php, **/*.twig'\"",
+    "build:css": "postcss src/css/style.css -o dist/css/main.min.css --no-map",
+    "build:js": "esbuild src/js/main.js --bundle --minify --outfile=dist/js/main.js",
+    "build:images": "node scripts/optimize-images.js",
+    "build": "npm run build:css && npm run build:js && npm run build:images"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "browser-sync": "^2.29.3",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
+  },
+  "devDependencies": {
+    "chokidar": "^3.6.0",
+    "concurrently": "^8.2.0",
+    "esbuild": "^0.19.0",
+    "glob": "^10.4.5",
+    "postcss-cli": "^10.1.0",
+    "sharp": "^0.32.6"
+  }
+}

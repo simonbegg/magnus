@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Custom base styles */
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Urbanist', sans-serif;
+    }
+    body {
+        font-family: 'Work Sans', sans-serif;
+    }
+}

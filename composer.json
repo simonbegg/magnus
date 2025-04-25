@@ -1,0 +1,13 @@
+{
+    "name": "magnus/wordpress-theme",
+    "description": "A modern WordPress starter theme with Timber and Tailwind CSS",
+    "type": "wordpress-theme",
+    "require": {
+        "timber/timber": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Magnus\\": "inc/"
+        }
+    }
+}

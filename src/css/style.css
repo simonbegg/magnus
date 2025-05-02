@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "./components/layout.css";
+@import "./components/buttons.css";
 
 /* Custom base styles */
 @layer base {
@@ -27,4 +29,14 @@
   body {
     font-family: "Work Sans", sans-serif;
   }
+}
+
+@theme {
+  --color-primary: #368bef;
+  --color-secondary: #ff6f1a;
+  --color-forest: #2a4828;
+  --color-misty: #a5c2d3;
+  --color-shadow: #4c6a7a;
+  --color-cloud: #edf4f7;
+  --color-grass: #819c3b;
 }

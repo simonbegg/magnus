@@ -1,0 +1,38 @@
+<section 
+    x-data="{ 
+        scrollPosition: 0,
+        roundedClass: 'rounded-none',
+        updateRounded() {
+            this.scrollPosition = window.scrollY;
+            if (this.scrollPosition > 50) {
+                this.roundedClass = 'rounded-b-[3rem]';
+            } else {
+                this.roundedClass = 'rounded-none';
+            }
+        }
+    }" 
+    x-init="updateRounded()" 
+    @scroll.window="updateRounded()"
+    class="overflow-hidden relative py-24 h-[calc(100vh-0rem)] md:py-32">
+	<div
+		class="absolute inset-0 z-0 transition-all duration-500"
+        :class="roundedClass">
+		<!-- This will use our optimized image from the dist/img directory -->
+		<img src="{{ theme.path }}/dist/images/hero.jpg" alt="" class="object-cover w-full h-full transition-all duration-500" :class="roundedClass">
+	</div>
+	<div class="absolute inset-0 z-10 bg-gradient-to-r transition-all duration-500 from-gray-700/80 via-gray-700/50" :class="roundedClass"></div>
+
+	<div class="flex absolute inset-0 z-10 items-center px-4 ml-32">
+		<div class="text-white md:max-w-3xl 2xl:max-w-6xl">
+			<h1 class="mb-6 text-4xl font-medium tracking-wide md:text-5xl lg:text-6xl 2xl:text-8xl font-special">
+				Transform Your Land, Restore Scotland's Nature
+			</h1>
+			<p class="mb-8 text-xl md:text-2xl 2xl:text-3xl">
+				Your information hub for rewilding in Scotland - from small plots to large estates
+			</p>
+			<div class="flex flex-wrap gap-4">
+				<a href="" class="btn btn-primary btn-lg">Explore our resources</a>
+			</div>
+		</div>
+	</div>
+</section>

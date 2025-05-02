@@ -1,0 +1,35 @@
+.btn {
+  @apply px-6 py-2 rounded-full tracking-wider font-medium inline-block text-white transition-all duration-300 bg-[#368BEF] hover:bg-[#2A70C0] text-base;
+}
+
+/* Button colors - only needed when overriding the primary default */
+.btn-secondary {
+  @apply bg-primary hover:bg-secondary;
+}
+.btn-tertiary {
+  @apply bg-forest hover:bg-[#6B8231];
+}
+
+/* Button sizes - only needed when overriding the medium default */
+.btn-sm {
+  @apply px-4 py-1 text-sm;
+}
+.btn-lg {
+  @apply px-8 py-3 text-lg;
+}
+
+/* Button with icon */
+.btn-icon {
+  @apply flex items-center justify-center gap-2;
+}
+
+/* Outline variations */
+.btn-outline {
+  @apply border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-white;
+}
+.btn-outline-secondary {
+  @apply border-2 border-secondary bg-transparent text-secondary hover:bg-secondary hover:text-white;
+}
+.btn-outline-tertiary {
+  @apply border-2 border-forest bg-transparent text-forest hover:bg-forest hover:text-white;
+}

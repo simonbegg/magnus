@@ -1,13 +1,89 @@
 {% extends "/scaffolding/base.twig" %}
 
 {% block content %}
-	<div class="mx-auto max-w-7xl py-32">
-		<h1 class="text-7xl font-bold text-gray-900 mb-8">Retro Sci-Fi</h1>
-		<p class="text-gray-600 mb-8">Retro sci-fi refers to science fiction that evokes the style, aesthetics, and imaginative visions of the future as seen through the lens of past eras, particularly the mid-20th century. It captures the optimism, sleek designs, vibrant colors, and technological fantasies popularized in the 1950s through the 1970s, often featuring ray guns, rocket ships, robots, and futuristic cities. Retro sci-fi blends nostalgia with imaginative storytelling, reimagining vintage concepts of the future while exploring themes of human innovation, exploration, and adventure.</p>
-		<div class="flex space-x-8">
-			<img src="{{ theme.path }}/dist/images/blog/Futuristic Interior with Arched Doorways.jpeg" alt="Futuristic Interior with Arched Doorways" class="rounded-3xl h-80 object-cover">
-			<img src="{{ theme.path }}/dist/images/blog/arcade.jpg" alt="Arcade" class="rounded-3xl h-80 object-cover">
-			<img src="{{ theme.path }}/dist/images/blog/humanoid.jpg" alt="Humanoid" class="rounded-3xl h-80 object-cover">
+	{% include "/components/hero/front-page-hero.twig" %}
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<p class="text-xl md:text-2xl 2xl:text-3xl">Rewilding is the restoration of ecosystems by allowing natural processes to return and flourish. It ranges from minimal interventions that let nature lead the way to active restoration of key habitats. Whether you have a garden, community space, farm, or estate, rewilding can be adapted to suit your land and goals.</p>
+			<p class="mt-8 text-xl md:text-2xl 2xl:text-3xl">Rewilding Scotland is an independent information hub designed to inspire and guide landowners and communities. We collect and share practical resources, showcase successful projects, and provide information about organizations and funding sources that support rewilding initiatives across Scotland.</p>
 		</div>
-	</div>
+	</section>
+	<section class="py-16 sm:py-24 xl:py-32 bg-[#EDF4F7]">
+		<div class="content-wrapper">
+			<div class="grid grid-cols-1 sm:grid-cols-4 gap-8">
+				<div class="shadow-2xl rounded-3xl bg-white p-4">
+					<img class="h-40 object-cover rounded-2xl w-full" src="{{ theme.path }}/dist/images/biodiversity.jpg" alt="">
+					<p class="mt-4 text-2xl font-bold">Biodiversity</p>
+					<p class="mt-2">Create habitats for Scotland's wildlife and help reverse species decline through restored ecosystems</p>
+				</div>
+				<div class="shadow-2xl rounded-3xl bg-white p-4">
+					<img class="h-40 object-cover rounded-2xl w-full" src="{{ theme.path }}/dist/images/climate.jpg" alt="">
+					<p class="mt-4 text-2xl font-bold">Climate</p>
+					<p class="mt-2">Capture carbon and build climate resilience through natural solutions like peatland restoration and native woodlands.</p>
+				</div>
+				<div class="shadow-2xl rounded-3xl bg-white p-4">
+					<img class="h-40 object-cover rounded-2xl w-full" src="{{ theme.path }}/dist/images/community.jpg" alt="">
+					<p class="mt-4 text-2xl font-bold">Community</p>
+					<p class="mt-2">Strengthen local connections to nature and create opportunities for education, wellbeing, and shared purpose.</p>
+				</div>
+				<div class="shadow-2xl rounded-3xl bg-white p-4">
+					<img class="h-40 object-cover rounded-2xl w-full" src="{{ theme.path }}/dist/images/economy.jpg" alt="">
+					<p class="mt-4 text-2xl font-bold">Economy</p>
+					<p class="mt-2">Explore sustainable land-based opportunities through nature tourism, carbon markets, and ecosystem services.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<div class="grid grid-cols-1 sm:grid-cols-4 gap-8">
+				<div class="rounded-3xl relative overflow-hidden group">
+					<img class="object-cover w-full h-full" src="{{ theme.path }}/dist/images/companions.jpg" alt="">
+					<div class="absolute inset-0"></div>
+					<div class="absolute inset-x-0 bottom-0 p-4 text-center bg-black/75">
+						<h3 class="text-white font-semibold text-2xl mb-2">New to Rewilding?</h3>
+						<div class="transform transition-all duration-500 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-48">
+							<p class="text-white leading-5">Explore its benefits, and learn how to assess if it's right for your land. Our introductory resources explain key concepts in clear, accessible language.</p>
+							<a href="" class="btn mt-4">Find Out More</a>
+						</div>
+					</div>
+				</div>
+				<div class="rounded-3xl relative overflow-hidden group">
+					<img class="object-cover w-full h-full" src="{{ theme.path }}/dist/images/woodsman.jpg" alt="">
+					<div class="absolute inset-0"></div>
+					<div class="absolute inset-x-0 bottom-0 p-4 text-center bg-black/75">
+						<h3 class="text-white font-semibold text-2xl mb-2">Assess Your Land's Potential</h3>
+						<div class="transform transition-all duration-500 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-48">
+							<p class="text-white leading-5">Every piece of land has unique rewilding opportunities. Our assessment guides offer information to help you evaluate your land's characteristics and identify suitable approaches.</p>
+							<a href="" class="btn mt-4">Find Out More</a>
+						</div>
+					</div>
+				</div>
+				<div class="rounded-3xl relative overflow-hidden group">
+					<img class="object-cover w-full h-full" src="{{ theme.path }}/dist/images/outdoorsman.jpg" alt="">
+					<div class="absolute inset-0"></div>
+					<div class="absolute inset-x-0 bottom-0 p-4 text-center bg-black/75">
+						<h3 class="text-white font-semibold text-2xl mb-2">Community-Led Projects</h3>
+						<div class="transform transition-all duration-500 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-48">
+							<p class="text-white leading-5">Communities across Scotland are coming together to restore nature. Explore inspiring examples and find information for developing your own collaborative project.</p>
+							<a href="" class="btn mt-4">Find Out More</a>
+						</div>
+					</div>
+				</div>
+				<div class="rounded-3xl relative overflow-hidden group">
+					<img class="object-cover w-full h-full" src="{{ theme.path }}/dist/images/bison.jpg" alt="">
+					<div class="absolute inset-0"></div>
+					<div class="absolute inset-x-0 bottom-0 p-4 text-center bg-black/75">
+						<h3 class="text-white font-semibold text-2xl mb-2">Take Your Project Further</h3>
+						<div class="transform transition-all duration-500 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-48">
+							<p class="text-white leading-5">Already rewilding? Access information about advanced techniques, monitoring methods, and resources to enhance your project's impact and long-term success.</p>
+							<a href="" class="btn mt-4">Find Out More</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
 {% endblock %}

@@ -1,0 +1,386 @@
+{% extends "./scaffolding/base.twig" %}
+{% block content %}
+	{% include "./components/hero/sub-page-hero.twig" with {
+    hero: {
+        wpImage: theme.path ~ '/dist/images/forest.jpg',
+        alt: 'Rewilding',
+        title: 'Is Rewilding Right for My Land?',
+        description: 'Are you considering rewilding but unsure if it’s right for your land? Our guide helps you understand the basics of rewilding and how it can be tailored to your specific circumstances.',
+        link: {
+            url: '#',
+            text: 'Read More'
+        }
+    }
+} %}
+	<section class="py-16 sm:py-24 xl:py-32 bg-shadow">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl text-white">Exploring the Potential for Nature's Return</h3>
+			<p class="mt-8 text-xl text-white">Inspired by the possibilities of rewilding? The next step is to consider whether it's the right approach for your specific piece of land and your goals. Rewilding isn't a one-size-fits-all solution, but its principles can be adapted to a wide variety of situations across Scotland.</p>
+			<p class="mt-8 text-xl text-white">This page provides resources to help you think through the key considerations. We'll look at how to assess your land's potential, balance different objectives, and understand the practicalities involved. Remember, this is an information resource to guide your thinking; detailed assessments may require professional advice.</p>
+		</div>
+	</section>
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">Starting Your Assessment: Key Questions to Consider</h3>
+			<p class="mt-8 text-xl">Before diving deeper, take some time to reflect on your land and your motivations. Answering these initial questions can help clarify your thoughts and guide your exploration of rewilding.</p>
+
+			<div x-data="{ checkedItems: [] }" class="space-y-8 mt-8 sm:mt-16">
+				<div>
+					<h4 class="text-2xl font-semibold mb-4">1. What is the current state of your land?</h4>
+					<ul class="space-y-3">
+						<template x-for="(item, index) in [
+																																																																																																																																																																																																																																																																																																																																																																											'What habitats are present (e.g., woodland, grassland, peatland, farmland)?',
+																																																																																																																																																																																																																																																																																																																																																																											'What is the land currently used for?',
+																																																																																																																																																																																																																																																																																																																																																																											'Are there signs of degradation (e.g., soil erosion, lack of biodiversity)?',
+																																																																																																																																																																																																																																																																																																																																																																											'What wildlife do you currently see?'
+																																																																																																																																																																																																																																																																																																																																																																										]" :key="index">
+							<li class="flex items-start gap-3 cursor-pointer transition-all duration-200 hover:bg-gray-50 p-3 rounded-lg" :class="{ 'text-gray-400': checkedItems.includes(index) }" @click="checkedItems.includes(index) ? checkedItems = checkedItems.filter(i => i !== index) : checkedItems.push(index)">
+								<svg class="w-6 h-6 flex-shrink-0 transition-colors duration-200" :class="{ 'text-primary': checkedItems.includes(index), 'text-gray-300': !checkedItems.includes(index) }" fill="currentColor" viewbox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span x-text="item" class="leading-tight" :class="{ 'line-through': checkedItems.includes(index) }"></span>
+							</li>
+						</template>
+					</ul>
+				</div>
+
+				<div>
+					<h4 class="text-2xl font-semibold mb-4">2. What are your main goals for the land?</h4>
+					<ul class="space-y-3">
+						<template x-for="(item, index) in [
+																																																																																																																																																																																																																																																																																																																																																																											'Are you primarily interested in boosting biodiversity?',
+																																																																																																																																																																																																																																																																																																																																																																											'Is climate mitigation (e.g., carbon storage) a key driver?',
+																																																																																																																																																																																																																																																																																																																																																																											'Do you need to generate income from the land?',
+																																																																																																																																																																																																																																																																																																																																																																											'Are community benefits or access important?',
+																																																																																																																																																																																																																																																																																																																																																																											'How much time and resource can you commit?'
+																																																																																																																																																																																																																																																																																																																																																																										]" :key="index + 5">
+							<li class="flex items-start gap-3 cursor-pointer transition-all duration-200 hover:bg-gray-50 p-3 rounded-lg" :class="{ 'text-gray-400': checkedItems.includes(index + 5) }" @click="checkedItems.includes(index + 5) ? checkedItems = checkedItems.filter(i => i !== index + 5) : checkedItems.push(index + 5)">
+								<svg class="w-6 h-6 flex-shrink-0 transition-colors duration-200" :class="{ 'text-primary': checkedItems.includes(index + 5), 'text-gray-300': !checkedItems.includes(index + 5) }" fill="currentColor" viewbox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span x-text="item" class="leading-tight" :class="{ 'line-through': checkedItems.includes(index + 5) }"></span>
+							</li>
+						</template>
+					</ul>
+				</div>
+
+				<div>
+					<h4 class="text-2xl font-semibold mb-4">3. What is the scale and context of your land?</h4>
+					<ul class="space-y-3">
+						<template x-for="(item, index) in [
+																																																																																																																																																																																																																																																																																																																																																																											'How large is the area?',
+																																																																																																																																																																																																																																																																																																																																																																											'Is it connected to other natural habitats or neighbouring landholdings?',
+																																																																																																																																																																																																																																																																																																																																																																											'Are there any legal designations (e.g., SSSI, National Park)?',
+																																																																																																																																																																																																																																																																																																																																																																											'What are the surrounding land uses?'
+																																																																																																																																																																																																																																																																																																																																																																										]" :key="index + 11">
+							<li class="flex items-start gap-3 cursor-pointer transition-all duration-200 hover:bg-gray-50 p-3 rounded-lg" :class="{ 'text-gray-400': checkedItems.includes(index + 11) }" @click="checkedItems.includes(index + 11) ? checkedItems = checkedItems.filter(i => i !== index + 11) : checkedItems.push(index + 11)">
+								<svg class="w-6 h-6 flex-shrink-0 transition-colors duration-200" :class="{ 'text-primary': checkedItems.includes(index + 11), 'text-gray-300': !checkedItems.includes(index + 11) }" fill="currentColor" viewbox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span x-text="item" class="leading-tight" :class="{ 'line-through': checkedItems.includes(index + 11) }"></span>
+							</li>
+						</template>
+					</ul>
+				</div>
+
+				<div>
+					<h4 class="text-2xl font-semibold mb-4">4. What are your initial thoughts on intervention?</h4>
+					<ul class="space-y-3">
+						<template x-for="(item, index) in [
+																																																																																																																																																																																																																																																																																																																																																																											'Are you drawn more to letting nature take its course with minimal intervention?',
+																																																																																																																																																																																																																																																																																																																																																																											'Or are you considering more active restoration efforts (e.g., tree planting, wetland creation)?'
+																																																																																																																																																																																																																																																																																																																																																																										]" :key="index + 15">
+							<li class="flex items-start gap-3 cursor-pointer transition-all duration-200 hover:bg-gray-50 p-3 rounded-lg" :class="{ 'text-gray-400': checkedItems.includes(index + 15) }" @click="checkedItems.includes(index + 15) ? checkedItems = checkedItems.filter(i => i !== index + 15) : checkedItems.push(index + 15)">
+								<svg class="w-6 h-6 flex-shrink-0 transition-colors duration-200" :class="{ 'text-primary': checkedItems.includes(index + 15), 'text-gray-300': !checkedItems.includes(index + 15) }" fill="currentColor" viewbox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span x-text="item" class="leading-tight" :class="{ 'line-through': checkedItems.includes(index + 15) }"></span>
+							</li>
+						</template>
+					</ul>
+				</div>
+			</div>
+
+			<p class="mt-8 text-xl">Thinking through these questions doesn't provide a simple 'yes' or 'no' to rewilding, but it helps frame the possibilities and challenges. Your answers will guide you towards the most appropriate approaches and resources.</p>
+		</div>
+	</section>
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">Rewilding Opportunities Across Scotland's Landscapes</h3>
+			<p class="mt-8 text-xl">Scotland's diverse landscapes offer varied opportunities for rewilding. The best approach will depend on your specific land type, its condition, and your objectives.</p>
+
+			<div class="glide mt-12">
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides">
+						<li class="glide__slide">
+							<div class="bg-white rounded-lg shadow-lg p-8">
+								<h4 class="text-2xl font-semibold mb-4">Woodland and Forest</h4>
+								<p class="text-lg mb-6">Focus might be on encouraging natural regeneration of native species, diversifying existing plantations, removing non-native species, or creating woodland corridors.</p>
+								<a href="#" class="inline-flex items-center text-primary hover:text-primary-dark font-medium">
+									Read Woodland Restoration Guide
+									<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+								</a>
+							</div>
+						</li>
+						<li class="glide__slide">
+							<div class="bg-white rounded-lg shadow-lg p-8">
+								<h4 class="text-2xl font-semibold mb-4">Agricultural Land</h4>
+								<p class="text-lg mb-6">Opportunities include creating wildlife margins, restoring hedgerows, integrating trees (agroforestry), converting less productive areas to wetland or woodland, or adopting nature-friendly grazing practices.</p>
+								<a href="#" class="inline-flex items-center text-primary hover:text-primary-dark font-medium">
+									Read Rewilding and Agriculture Guide
+									<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+								</a>
+							</div>
+						</li>
+						<li class="glide__slide">
+							<div class="bg-white rounded-lg shadow-lg p-8">
+								<h4 class="text-2xl font-semibold mb-4">Uplands and Moorland</h4>
+								<p class="text-lg mb-6">Potential actions include peatland restoration (blocking drains), reducing grazing pressure to allow vegetation recovery, and encouraging scrub and woodland regeneration in sheltered areas.</p>
+								<a href="#" class="inline-flex items-center text-primary hover:text-primary-dark font-medium">
+									Read Peatland Restoration Guide
+									<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+								</a>
+							</div>
+						</li>
+						<li class="glide__slide">
+							<div class="bg-white rounded-lg shadow-lg p-8">
+								<h4 class="text-2xl font-semibold mb-4">Rivers, Lochs, and Wetlands</h4>
+								<p class="text-lg mb-6">Focus could be on naturalising river channels, removing barriers to fish migration, creating or restoring ponds and wetlands, or establishing riparian buffer zones.</p>
+								<a href="#" class="inline-flex items-center text-primary hover:text-primary-dark font-medium">
+									Read Wetland and River Restoration Guide
+									<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+								</a>
+							</div>
+						</li>
+						<li class="glide__slide">
+							<div class="bg-white rounded-lg shadow-lg p-8">
+								<h4 class="text-2xl font-semibold mb-4">Coastal Areas</h4>
+								<p class="text-lg mb-6">Opportunities exist for saltmarsh and dune restoration, exploring seagrass or native oyster restoration (often requiring partnerships), and managing coastal habitats more naturally.</p>
+								<a href="#" class="inline-flex items-center text-primary hover:text-primary-dark font-medium">
+									Read Coastal and Marine Rewilding Guide
+									<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+								</a>
+							</div>
+						</li>
+						<li class="glide__slide">
+							<div class="bg-white rounded-lg shadow-lg p-8">
+								<h4 class="text-2xl font-semibold mb-4">Urban and Community Spaces</h4>
+								<p class="text-lg mb-6">Even small urban plots, gardens, parks, and school grounds can be rewilded by creating mini-meadows, ponds, planting native species, and reducing intensive management.</p>
+								<a href="#" class="inline-flex items-center text-primary hover:text-primary-dark font-medium">
+									Read Small-Scale Rewilding Guide
+									<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="glide__arrows" data-glide-el="controls">
+					<button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+						</svg>
+					</button>
+					<button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+						</svg>
+					</button>
+				</div>
+
+				<div class="glide__bullets" data-glide-el="controls[nav]">
+					<button class="glide__bullet" data-glide-dir="=0"></button>
+					<button class="glide__bullet" data-glide-dir="=1"></button>
+					<button class="glide__bullet" data-glide-dir="=2"></button>
+					<button class="glide__bullet" data-glide-dir="=3"></button>
+					<button class="glide__bullet" data-glide-dir="=4"></button>
+					<button class="glide__bullet" data-glide-dir="=5"></button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">Finding the Right Balance: Nature, People, and Economy</h3>
+			<p class="mt-8 text-xl">Rewilding rarely happens in isolation. Most land needs to deliver multiple benefits, including ecological restoration, economic viability, and social value. Successfully integrating rewilding often involves balancing these different objectives.</p>
+
+			<div
+				class="rewilding-diagram relative mt-16 mx-auto aspect-video">
+				<!-- Center Icon -->
+				<div class="absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-gray-600 flex items-center justify-center">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" class="size-10 text-white">
+						<path d="M11 2a2 2 0 1 0 0 4 2 2 0 1 0 0-4m7 4a2 2 0 1 0 0 4 2 2 0 1 0 0-4m2 8a2 2 0 1 0 0 4 2 2 0 1 0 0-4M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045q-.64-2.065-2.7-2.705A3.5 3.5 0 0 1 5.5 10Z"/>
+					</svg>
+				</div>
+
+				<!-- Connection Lines -->
+				<div class="absolute inset-0">
+					<svg class="w-full h-full" viewbox="0 0 800 450">
+						<path class="connection-line" data-element="community" d="M400,225 L200,112" stroke="#ddd" stroke-width="2" stroke-dasharray="4"/>
+						<path class="connection-line" data-element="nature" d="M400,225 L600,112" stroke="#ddd" stroke-width="2" stroke-dasharray="4"/>
+						<path class="connection-line" data-element="economy" d="M400,225 L600,338" stroke="#ddd" stroke-width="2" stroke-dasharray="4"/>
+						<path class="connection-line" data-element="land" d="M400,225 L200,338" stroke="#ddd" stroke-width="2" stroke-dasharray="4"/>
+					</svg>
+				</div>
+
+				<!-- Content Blocks -->
+				<div class="rewilding-content absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 text-center z-10 hidden" data-element="community">
+					<div class="bg-white p-4 rounded-lg">
+						<h4 class="text-lg font-semibold mb-2">Ecology and Economy</h4>
+						<p class="text-sm">Can rewilding activities generate income? Opportunities might include nature-based tourism, selling accredited carbon credits from peatland or woodland restoration, sustainable timber harvesting, or developing niche products. Careful planning is needed to ensure economic activities support, rather than hinder, ecological goals.</p>
+					</div>
+				</div>
+
+				<div class="rewilding-content absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 text-center z-10 hidden" data-element="nature">
+					<div class="bg-white p-4 rounded-lg">
+						<h4 class="text-lg font-semibold mb-2">Nature and Food Production</h4>
+						<p class="text-sm">On farmland, rewilding doesn't necessarily mean stopping food production. Agroecological approaches and land zoning can allow space for nature recovery alongside productive farming.</p>
+					</div>
+				</div>
+
+				<div class="rewilding-content absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 text-center z-10 hidden" data-element="economy">
+					<div class="bg-white p-4 rounded-lg">
+						<h4 class="text-lg font-semibold mb-2">Restoration and Access</h4>
+						<p class="text-sm">How can rewilding enhance opportunities for recreation and community access? Planning paths, hides, or educational resources can connect people with recovering nature, but needs careful management to avoid disturbance.</p>
+					</div>
+				</div>
+
+				<div class="rewilding-content absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 text-center z-10 hidden" data-element="land">
+					<div class="bg-white p-4 rounded-lg">
+						<h4 class="text-lg font-semibold mb-2">Community Engagement</h4>
+						<p class="text-sm">How will your plans affect neighbours or the wider community? Open communication and involving local people from the outset are crucial for building support and addressing potential concerns.</p>
+					</div>
+				</div>
+
+				<!-- Corner Elements -->
+				<div class="rewilding-element absolute left-[15%] top-[15%] -translate-x-1/2 -translate-y-1/2 cursor-pointer" data-element="community">
+					<div class="w-14 h-14 rounded-full bg-[#8B5CF6] flex items-center justify-center mb-3 mx-auto">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" class="size-7 text-white">
+							<path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17m4 4 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9M2 16l6 6m8-15.9a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 1 0 0-5.8M6 2a3 3 0 1 0 0 6 3 3 0 1 0 0-6"/>
+						</svg>
+					</div>
+					<h4 class="text-lg font-semibold text-center">Ecology and Economy</h4>
+				</div>
+
+				<div class="rewilding-element absolute right-[15%] top-[15%] translate-x-1/2 -translate-y-1/2 cursor-pointer" data-element="nature">
+					<div class="w-14 h-14 rounded-full bg-[#10B981] flex items-center justify-center mb-3 mx-auto">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" class="size-7 text-white">
+							<path d="m10 11 11 .9a1 1 0 0 1 .8 1.1l-.665 4.158a1 1 0 0 1-.988.842H20m-4 0h-5m7-13a1 1 0 0 0-1 1v5.573M3 4h8.129a1 1 0 0 1 .99.863L13 11.246M4 11V4m3 11h.01M8 10.1V4m10 12a2 2 0 1 0 0 4 2 2 0 1 0 0-4M7 10a5 5 0 1 0 0 10 5 5 0 1 0 0-10"/>
+						</svg>
+					</div>
+					<h4 class="text-lg font-semibold text-center">Nature and Food Production</h4>
+				</div>
+
+				<div class="rewilding-element absolute right-[15%] bottom-[15%] translate-x-1/2 translate-y-1/2 cursor-pointer" data-element="economy">
+					<div class="w-14 h-14 rounded-full bg-[#3B82F6] flex items-center justify-center mb-3 mx-auto">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" class="size-7 text-white">
+							<path d="M10 10h4m5-3V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3m5 14a2 2 0 0 0 2-2v-3.851c0-1.39-2-2.962-2-4.829V8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2zm2-5H2m2 5a2 2 0 0 1-2-2v-3.851c0-1.39 2-2.962 2-4.829V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2zM9 7V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3"/>
+						</svg>
+					</div>
+					<h4 class="text-lg font-semibold text-center">Restoration and Access</h4>
+				</div>
+
+				<div class="rewilding-element absolute left-[15%] bottom-[15%] -translate-x-1/2 translate-y-1/2 cursor-pointer" data-element="land">
+					<div class="w-14 h-14 rounded-full bg-[#EF4444] flex items-center justify-center mb-3 mx-auto">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" class="size-7 text-white">
+							<path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20m0 0a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/>
+						</svg>
+					</div>
+					<h4 class="text-lg font-semibold text-center">Community Engagement</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">Your Questions Answered</h3>
+			<p class="mt-8 text-xl">Starting out with rewilding can bring up many questions. Here are answers to some common queries we hear.</p>
+
+			<div class="mt-12 space-y-6" x-data="{ activeQuestion: null }">
+				<div class="border-b border-gray-200">
+					<button @click="activeQuestion = activeQuestion === 1 ? null : 1" class="flex w-full items-center justify-between py-4 text-left">
+						<span class="text-xl font-medium">How much does rewilding cost?</span>
+						<svg class="h-6 w-6 transform transition-transform" :class="{ 'rotate-180': activeQuestion === 1 }" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+						</svg>
+					</button>
+					<div x-show="activeQuestion === 1" x-collapse x-cloak class="pb-4">
+						<p class="text-gray-600">Costs vary hugely depending on the scale and type of intervention. Passive rewilding (e.g., reducing grazing) can have low initial costs but might mean foregoing some income. Active restoration (e.g., large-scale tree planting or peatland work) can be expensive, but funding is often available. Explore our Funding and Support section for more information.</p>
+					</div>
+				</div>
+
+				<div class="border-b border-gray-200">
+					<button @click="activeQuestion = activeQuestion === 2 ? null : 2" class="flex w-full items-center justify-between py-4 text-left">
+						<span class="text-xl font-medium">Do I need permission to rewild my land?</span>
+						<svg class="h-6 w-6 transform transition-transform" :class="{ 'rotate-180': activeQuestion === 2 }" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+						</svg>
+					</button>
+					<div x-show="activeQuestion === 2" x-collapse x-cloak class="pb-4">
+						<p class="text-gray-600">It depends. Some activities, like large-scale tree planting, blocking major drains, or work near watercourses or protected sites, may require permissions or licences (e.g., from NatureScot, SEPA, or the local authority). It's crucial to check regulations relevant to your specific plans. Our Getting Started section offers more guidance.</p>
+					</div>
+				</div>
+
+				<div class="border-b border-gray-200">
+					<button @click="activeQuestion = activeQuestion === 3 ? null : 3" class="flex w-full items-center justify-between py-4 text-left">
+						<span class="text-xl font-medium">How long does it take to see results?</span>
+						<svg class="h-6 w-6 transform transition-transform" :class="{ 'rotate-180': activeQuestion === 3 }" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+						</svg>
+					</button>
+					<div x-show="activeQuestion === 3" x-collapse x-cloak class="pb-4">
+						<p class="text-gray-600">Some changes happen quickly – wildflowers and insects can return to grasslands within a year or two of changed management. Other processes, like woodland regeneration, take decades or even centuries. Rewilding requires patience and a long-term perspective.</p>
+					</div>
+				</div>
+
+				<div class="border-b border-gray-200">
+					<button @click="activeQuestion = activeQuestion === 4 ? null : 4" class="flex w-full items-center justify-between py-4 text-left">
+						<span class="text-xl font-medium">Will rewilding attract unwanted species or pests?</span>
+						<svg class="h-6 w-6 transform transition-transform" :class="{ 'rotate-180': activeQuestion === 4 }" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+						</svg>
+					</button>
+					<div x-show="activeQuestion === 4" x-collapse x-cloak class="pb-4">
+						<p class="text-gray-600">Rewilding aims to restore balanced ecosystems. While some species populations might increase, healthy ecosystems tend to be self-regulating. Concerns about specific species (e.g., deer impacting tree regeneration) often require targeted management as part of the plan.</p>
+					</div>
+				</div>
+
+				<div class="border-b border-gray-200">
+					<button @click="activeQuestion = activeQuestion === 5 ? null : 5" class="flex w-full items-center justify-between py-4 text-left">
+						<span class="text-xl font-medium">Where can I get help or advice?</span>
+						<svg class="h-6 w-6 transform transition-transform" :class="{ 'rotate-180': activeQuestion === 5 }" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+						</svg>
+					</button>
+					<div x-show="activeQuestion === 5" x-collapse x-cloak class="pb-4">
+						<p class="text-gray-600">This website provides information and signposts to resources. For specific advice tailored to your land, you may need to consult ecological experts, land agents, or relevant organisations. Our Organisation Directory lists potential contacts.</p>
+					</div>
+				</div>
+
+				<div class="border-b border-gray-200">
+					<button @click="activeQuestion = activeQuestion === 6 ? null : 6" class="flex w-full items-center justify-between py-4 text-left">
+						<span class="text-xl font-medium">What if I change my mind?</span>
+						<svg class="h-6 w-6 transform transition-transform" :class="{ 'rotate-180': activeQuestion === 6 }" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+						</svg>
+					</button>
+					<div x-show="activeQuestion === 6" x-collapse x-cloak class="pb-4">
+						<p class="text-gray-600">Rewilding approaches can often be adapted. However, some interventions (like large-scale woodland creation) represent significant long-term commitments. It's important to plan carefully and consider the long-term implications.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<div class="rounded-3xl p-8 sm:p-16 bg-misty">
+				<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">Ready to Take the Next Step?</h3>
+				<p class="mt-8 text-xl">If you're considering rewilding, explore our resources on planning your project and find practical guidance for different habitats.</p>
+				<div class="mt-8 flex gap-4">
+					<a href="#" class="btn btn-primary">Getting Started with Your Project</a>
+					<a href="#" class="btn btn-secondary">Browse Practical Guides</a>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,246 @@
+{% extends "./scaffolding/base.twig" %}
+{% block content %}
+	{% include "./components/hero/sub-page-hero.twig" with {
+    hero: {
+        wpImage: theme.path ~ '/dist/images/hiker.jpg',
+        alt: 'First Steps in Rewilding: Turning Vision into Reality',
+        title: 'First Steps in Rewilding: Turning Vision into Reality',
+        description: 'Rewilding is a bold and transformative approach to restoring nature and its benefits. By reconnecting people with the land and wildlife, it offers a path to a more sustainable and biodiverse future.',
+        link: {
+            url: '#',
+            text: 'Read More'
+        }
+    }
+} %}
+	<section class="py-16 sm:py-24 xl:py-32 bg-forest">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl text-white">What Does a Wilder Future Look Like for Your Land?</h3>
+			<p class="mt-8 text-xl text-white">Embarking on a rewilding journey starts with a compelling vision. What do you hope to achieve? What changes do you dream of seeing on your land? Taking the time to clearly define your vision and set achievable goals is the bedrock of a successful project. This isn’t just about what you want to do, but what you want your land to become.</p>
+			<p class="mt-8 text-xl text-white">Think broadly at first. Do you envision more wildlife, a richer tapestry of habitats, a place where natural processes are more evident? Perhaps you see opportunities for people to connect with nature, or for your land to play a bigger role in tackling climate change.</p>
+			<p class="mt-8 text-xl text-white">Once you have a broad vision, it’s helpful to translate this into SMART goals: Specific, Measurable, Achievable, Relevant, and Time-bound.</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<div class="flex items-center gap-3 mb-4">
+						<span class="text-4xl font-bold text-white/90">S</span>
+						<h4 class="text-2xl font-semibold text-white">Specific</h4>
+					</div>
+					<p class="text-white/80 mb-3">Instead of vague goals, be precise about what you want to achieve.</p>
+					<p class="text-white/90 italic border-l-4 border-white/30 pl-4">"Establish 5 hectares of native broadleaf woodland"</p>
+				</div>
+
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<div class="flex items-center gap-3 mb-4">
+						<span class="text-4xl font-bold text-white/90">M</span>
+						<h4 class="text-2xl font-semibold text-white">Measurable</h4>
+					</div>
+					<p class="text-white/80 mb-3">Define clear metrics to track your progress.</p>
+					<p class="text-white/90 italic border-l-4 border-white/30 pl-4">"Increase sightings of key bird species by 20% within 5 years"</p>
+				</div>
+
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<div class="flex items-center gap-3 mb-4">
+						<span class="text-4xl font-bold text-white/90">A</span>
+						<h4 class="text-2xl font-semibold text-white">Achievable</h4>
+					</div>
+					<p class="text-white/80 mb-3">Set realistic goals based on your resources and capabilities.</p>
+					<p class="text-white/90 italic border-l-4 border-white/30 pl-4">"Start small and scale up based on initial successes"</p>
+				</div>
+
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<div class="flex items-center gap-3 mb-4">
+						<span class="text-4xl font-bold text-white/90">R</span>
+						<h4 class="text-2xl font-semibold text-white">Relevant</h4>
+					</div>
+					<p class="text-white/80 mb-3">Ensure goals align with your vision and land's potential.</p>
+					<p class="text-white/90 italic border-l-4 border-white/30 pl-4">"Choose projects that match your land's ecological potential"</p>
+				</div>
+
+				<div class="md:col-span-2 lg:col-span-1 bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<div class="flex items-center gap-3 mb-4">
+						<span class="text-4xl font-bold text-white/90">T</span>
+						<h4 class="text-2xl font-semibold text-white">Time-bound</h4>
+					</div>
+					<p class="text-white/80 mb-3">Set clear deadlines for your goals.</p>
+					<p class="text-white/90 italic border-l-4 border-white/30 pl-4">"Restore natural water flow to 500m of the burn by the end of year two"</p>
+				</div>
+			</div>
+			<p class="mt-16 text-xl text-white">Balancing ambition with practicality is key. It’s exciting to dream big, but breaking your vision down into manageable steps will keep you motivated and on track. Consider both short-term wins and long-term aspirations.</p>
+		</div>
+	</section>
+	{% include "./partials/divider.twig" with {reverse: true} %}
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">Getting to Know Your Land: The Foundation for Rewilding</h3>
+			<p class="mt-8 text-xl">Understanding your land is fundamental to effective rewilding. A thorough assessment will reveal its current ecological state, its potential for restoration, and any constraints you might face. This doesn’t always require expensive surveys initially; much can be learned through careful observation and research.</p>
+			<h4 class="text-2xl font-semibold mt-16">DIY Assessment – What to Look For:</h4>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+				<div>
+					<h4 class="text-2xl font-semibold">Habitats</h4>
+					<p>Habitats: What types of habitat are present (e.g., grassland, woodland, heath, wetland)? Map them out. Are they in good condition? Are there remnants of richer habitats (e.g., veteran trees, old hedgerows)?</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Species</h4>
+					<p>Species: What plants and animals currently use your land? Keep records of sightings. Are there any notable or rare species? Are there invasive non-native species that need managing?</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Soil and Water</h4>
+					<p>Soil and Water: What is the soil type like? Are there areas of compaction or erosion? How does water flow across your land? Are there burns, ditches, or boggy areas? Consider the water quality.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Connectivity</h4>
+					<p>Connectivity: Is your land linked to other natural or semi-natural habitats? Are there barriers to wildlife movement (e.g., fences, roads)?</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Human Influences</h4>
+					<p>Human Influences: How is the land currently managed? What are the historical land uses? Are there public rights of way or neighbouring activities to consider?</p>
+				</div>
+			</div>
+			<h4 class="text-2xl font-semibold mt-16">Documenting Your Baseline:</h4>
+			<p class="text">Keeping good records from the start is invaluable. This “baseline” will help you track changes and demonstrate the impact of your rewilding efforts.</p>
+			<div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-8">
+				<div>
+					<h4 class="text-2xl font-semibold">Photographs and Videos</h4>
+					<p>Take fixed-point photos at different times of the year.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Mapping</h4>
+					<p>Sketch maps of habitats and key features. Online mapping tools can also be useful.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Species Lists</h4>
+					<p>Note down what you see and hear.</p>
+				</div>
+			</div>
+			<h4 class="text-2xl font-semibold mt-16">When to Seek Professional Help:</h4>
+			<p class="text-xl">While a DIY assessment is a great starting point, for larger or more complex sites, or if you’re planning significant interventions, professional ecological advice can be invaluable. An ecologist can help with detailed habitat surveys, species identification, and understanding the ecological potential and constraints of your site.</p>
+			<p class="text-xl mt-8">External Link:
+				<a href="https://www.cieem.org.uk/">Link to the Chartered Institute of Ecology and Environmental Management (CIEEM) directory for finding qualified ecologists in Scotland</a>
+			</p>
+			<p class="text-xl mt-8">External Link:
+				<a href="https://www.naturescot.org.uk/">Link to NatureScot resources on habitat surveys or land assessment – e.g., guidance on understanding your land</a>
+			</p>
+		</div>
+	</section>
+	{% include "./partials/divider.twig" %}
+	<section class="py-16 sm:py-24 xl:py-32 bg-forest">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl text-white">Navigating the Rules: Rewilding and the Law</h3>
+			<p class="mt-8 text-xl text-white">Before you start making changes on your land, it’s important to understand the legal framework that might apply. Scotland has various laws and designations designed to protect its environment and heritage, and some rewilding activities may require permissions or licences.</p>
+			<p class="mt-8 text-xl text-white">Key Areas to Consider:</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<h4 class="text-2xl font-semibold text-white mb-4">Protected Sites</h4>
+					<p class="text-white/90 mb-4">Is your land designated as:</p>
+					<ul class="list-disc list-inside text-white/80 mb-4 space-y-2">
+						<li>Site of Special Scientific Interest (SSSI)</li>
+						<li>Special Area of Conservation (SAC)</li>
+						<li>Special Protection Area (SPA)</li>
+						<li>National Park or National Scenic Area</li>
+					</ul>
+					<p class="text-white/90 mb-4">These designations require specific management and NatureScot consultation.</p>
+					<a href="https://www.naturescot.org.uk/" class="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition-colors">Check Your Land's Designation →</a>
+				</div>
+
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<h4 class="text-2xl font-semibold text-white mb-4">Protected Species</h4>
+					<p class="text-white/90 mb-4">Licenses needed for activities affecting:</p>
+					<ul class="list-disc list-inside text-white/80 mb-4 space-y-2">
+						<li>Badger setts</li>
+						<li>Bat roosts</li>
+						<li>Nesting birds</li>
+						<li>Other protected species</li>
+					</ul>
+					<a href="https://www.naturescot.org.uk/" class="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition-colors">Species Protection Guide →</a>
+				</div>
+
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<h4 class="text-2xl font-semibold text-white mb-4">Tree Management</h4>
+					<p class="text-white/90 mb-4">Felling licenses required for:</p>
+					<ul class="list-disc list-inside text-white/80 mb-4 space-y-2">
+						<li>Native trees</li>
+						<li>Non-native trees</li>
+						<li>Volume-dependent requirements</li>
+					</ul>
+					<a href="https://www.scottishforestry.gov.uk/" class="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition-colors">Felling License Guide →</a>
+				</div>
+
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<h4 class="text-2xl font-semibold text-white mb-4">Water Environment</h4>
+					<p class="text-white/90 mb-4">SEPA regulation required for:</p>
+					<ul class="list-disc list-inside text-white/80 mb-4 space-y-2">
+						<li>River modifications</li>
+						<li>Wetland alterations</li>
+						<li>Pond creation</li>
+						<li>Drainage changes</li>
+					</ul>
+					<a href="https://www.sepa.org.uk/" class="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition-colors">CAR Licensing Info →</a>
+				</div>
+
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<h4 class="text-2xl font-semibold text-white mb-4">Planning & Assessment</h4>
+					<p class="text-white/90 mb-4">Requirements for:</p>
+					<ul class="list-disc list-inside text-white/80 mb-4 space-y-2">
+						<li>Environmental Impact Assessments</li>
+						<li>Planning permission for tracks</li>
+						<li>Fencing in sensitive areas</li>
+						<li>Major land use changes</li>
+					</ul>
+					<a href="https://www.gov.scot/" class="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition-colors">Planning Guidelines →</a>
+				</div>
+
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-transform hover:scale-105">
+					<h4 class="text-2xl font-semibold text-white mb-4">Rights & Responsibilities</h4>
+					<p class="text-white/90 mb-4">Key considerations:</p>
+					<ul class="list-disc list-inside text-white/80 mb-4 space-y-2">
+						<li>Public access rights</li>
+						<li>Land Reform Act compliance</li>
+						<li>Biosecurity measures</li>
+						<li>Neighboring land impacts</li>
+					</ul>
+					<a href="https://www.gov.scot/" class="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition-colors">Landowner Guidelines →</a>
+				</div>
+			</div>
+			<p class="mt-8 text-xl text-white">This might seem daunting, but it’s about responsible land management. Seeking advice early from relevant authorities like NatureScot, SEPA, Scottish Forestry, and your local council can save time and prevent problems later on. This website is for information; it does not constitute legal advice.</p>
+		</div>
+	</section>
+	{% include "./partials/divider.twig" with {reverse: true, fillColor: 'text-cloud', style: 'wave2'} %}
+	<section class="py-16 sm:py-24 xl:py-32 bg-cloud">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">Growing Support for Rewilding</h3>
+			<p class="mt-8 text-xl">Recognising the urgent need for action, there is growing political and societal support for nature restoration in Scotland. The Scottish Government has declared a climate and nature emergency and set ambitious targets for tackling biodiversity loss.</p>
+			<p class="mt-8 text-xl">Key policy developments include:</p>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+				<div>
+					<h4 class="text-2xl font-semibold">Scottish Biodiversity Strategy</h4>
+					<p>Aims to halt biodiversity loss by 2030 and achieve significant restoration by 2045, explicitly recognising the role of nature restoration and rewilding approaches.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Climate Change Plan</h4>
+					<p>Sets targets for reducing emissions, with nature-based solutions like peatland restoration and woodland creation playing a crucial role.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Land Reform</h4>
+					<p>Ongoing discussions about land ownership and use aim to empower communities and encourage more sustainable land management.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Funding Mechanisms</h4>
+					<p>Various government grants, such as the Nature Restoration Fund and Agri-Environment Climate Scheme (AECS), provide financial support for projects that align with rewilding principles (See our Funding and Support section for details).</p>
+				</div>
+			</div>
+			<p class="mt-8 text-xl">While challenges remain in translating policy into widespread action on the ground, the direction of travel is positive. Organisations like NatureScot (Scotland's nature agency), Forestry and Land Scotland, and numerous environmental charities are actively involved in supporting and delivering nature restoration projects.</p>
+			<p class="mt-8 text-xl">This supportive context makes Scotland a prime location for pioneering rewilding initiatives.</p>
+		</div>
+	</section>
+	{% include "./partials/divider.twig" with {reverse: true, color: 'text-cloud', fillColor: 'text-white', style: 'wave2'} %}
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">
+				Could Rewilding Be Right for Your Land?</h3>
+			<p class="mt-8 text-xl">
+				Explore the practical considerations and assess whether rewilding aligns with your goals and the potential of your land.</p>
+			<a href="" class="mt-8 btn btn-lg btn-secondary">
+				Is Rewilding Right for My Land?</a>
+			<a href="" class="mt-8 btn btn-lg btn-secondary">Explore Practical Guides</a>
+		</div>
+	</section>
+{% endblock %}

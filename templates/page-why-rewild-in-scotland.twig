@@ -1,0 +1,213 @@
+{% extends "./scaffolding/base.twig" %}
+{% block content %}
+	{% include "./components/hero/sub-page-hero.twig" with {
+    hero: {
+        wpImage: theme.path ~ '/dist/images/skye.jpg',
+        alt: 'Global Consult',
+        title: 'Why Rewild in Scotland? A Unique Opportunity',
+        description: 'Scotland offers a unique opportunity to rewild, with its dramatic landscapes and rich natural heritage. From the Flow Country to the Highlands, there are countless opportunities to restore ecosystems and the wildlife they support.',
+        link: {
+            url: '#',
+            text: 'Read More'
+        }
+    }
+} %}
+	<section class="py-16 sm:py-24 xl:py-32 bg-shadow">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl text-white">A Land Shaped by Nature, Ready for Renewal</h3>
+			<p class="mt-8 text-xl text-white">Scotland boasts some of Europe's most dramatic and wild landscapes, a legacy of its unique geology and climate. From the windswept peaks of the Highlands and the vast peatlands of the Flow Country to the intricate coastline and the remnants of the ancient Caledonian Forest, our natural heritage is truly exceptional.</p>
+			<p class="mt-8 text-xl text-white">Historically, Scotland was home to vast forests teeming with wildlife, including lynx, wolves, and beaver. Its rivers ran wild, shaping floodplains, and its coasts supported rich marine ecosystems. While centuries of human activity have significantly altered these landscapes, the potential for nature's recovery remains immense.</p>
+			<p class="text-2xl text-white mt-8">Key Scottish ecosystems hold global significance:</p>
+			<div class="grid grid-cols-1 sm:grid-cols-4 gap-8 mt-8">
+				<div class="shadow-2xl rounded-3xl bg-white p-4">
+					<img class="h-40 object-cover rounded-2xl w-full" src="{{ theme.path }}/dist/images/peatland.jpg" alt="">
+					<p class="mt-4 text-2xl font-bold">Peatlands</p>
+					<p class="mt-2">Scotland holds a significant proportion of the world's blanket bog, a vital carbon store.</p>
+				</div>
+				<div class="shadow-2xl rounded-3xl bg-white p-4">
+					<img class="h-40 object-cover rounded-2xl w-full" src="{{ theme.path }}/dist/images/woodland.jpg" alt="">
+					<p class="mt-4 text-2xl font-bold">Native Woodlands</p>
+					<p class="mt-2">Including the iconic Caledonian pinewoods and temperate rainforests found along the west coast, home to rare lichens, mosses, and birds.</p>
+				</div>
+				<div class="shadow-2xl rounded-3xl bg-white p-4">
+					<img class="h-40 object-cover rounded-2xl w-full" src="{{ theme.path }}/dist/images/coastal.jpg" alt="">
+					<p class="mt-4 text-2xl font-bold">Coastal & Marine Habitats</p>
+					<p class="mt-2">Extensive coastlines support seabird colonies, marine mammals, and vital habitats like seagrass beds and kelp forests.</p>
+				</div>
+				<div class="shadow-2xl rounded-3xl bg-white p-4">
+					<img class="h-40 object-cover rounded-2xl w-full" src="{{ theme.path }}/dist/images/mountains.jpg" alt="">
+					<p class="mt-4 text-2xl font-bold">Mountains & Moorlands</p>
+					<p class="mt-2">Unique upland habitats support specialised species adapted to harsh conditions.</p>
+				</div>
+				<div class="rounded-3xl relative overflow-hidden group">
+					<img class="object-cover w-full h-full" src="{{ theme.path }}/dist/images/peatland.jpg" alt="">
+					<div class="absolute inset-0"></div>
+					<div class="absolute inset-x-0 bottom-0 p-4 text-center bg-black/75">
+						<h3 class="text-white font-semibold text-2xl mb-2">Peatlands</h3>
+						<div class="transform transition-all duration-500 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-48">
+							<p class="text-white leading-5">Scotland holds a significant proportion of the world's blanket bog, a vital carbon store.</p>
+							<a href="" class="btn mt-4">Find Out More</a>
+						</div>
+					</div>
+				</div>
+				<div class="rounded-3xl relative overflow-hidden group">
+					<img class="object-cover w-full h-full" src="{{ theme.path }}/dist/images/woodland.jpg" alt="">
+					<div class="absolute inset-0"></div>
+					<div class="absolute inset-x-0 bottom-0 p-4 text-center bg-black/75">
+						<h3 class="text-white font-semibold text-2xl mb-2">Native Woodlands</h3>
+						<div class="transform transition-all duration-500 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-48">
+							<p class="text-white leading-5">Including the iconic Caledonian pinewoods and temperate rainforests found along the west coast, home to rare lichens, mosses, and birds.</p>
+							<a href="" class="btn mt-4">Find Out More</a>
+						</div>
+					</div>
+				</div>
+				<div class="rounded-3xl relative overflow-hidden group">
+					<img class="object-cover w-full h-full" src="{{ theme.path }}/dist/images/coastal.jpg" alt="">
+					<div class="absolute inset-0"></div>
+					<div class="absolute inset-x-0 bottom-0 p-4 text-center bg-black/75">
+						<h3 class="text-white font-semibold text-2xl mb-2">Coastal & Marine Habitats</h3>
+						<div class="transform transition-all duration-500 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-48">
+							<p class="text-white leading-5">Extensive coastlines support seabird colonies, marine mammals, and vital habitats like seagrass beds and kelp forests.</p>
+							<a href="" class="btn mt-4">Find Out More</a>
+						</div>
+					</div>
+				</div>
+				<div class="rounded-3xl relative overflow-hidden group">
+					<img class="object-cover w-full h-full" src="{{ theme.path }}/dist/images/mountains.jpg" alt="">
+					<div class="absolute inset-0"></div>
+					<div class="absolute inset-x-0 bottom-0 p-4 text-center bg-black/75">
+						<h3 class="text-white font-semibold text-2xl mb-2">Mountains & Moorlands</h3>
+						<div class="transform transition-all duration-500 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-48">
+							<p class="text-white leading-5">Unique upland habitats support specialised species adapted to harsh conditions.</p>
+							<a href="" class="btn mt-4">Find Out More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="mt-8 text-2xl text-white">Understanding this rich natural heritage is the first step towards envisioning its restoration through rewilding.</p>
+		</div>
+	</section>
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">A Call to Action: Nature Under Pressure</h3>
+			<p class="mt-8 text-xl">Despite its beauty, Scotland's nature faces significant challenges. Decades of intensive land use, habitat fragmentation, pollution, and the escalating climate crisis have taken their toll. We are now recognised as one of the most nature-depleted countries in the world.</p>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8 sm:mt-16">
+				<div>
+					<h4 class="text-2xl font-semibold">Biodiversity Loss</h4>
+					<p>Many iconic Scottish species, like the wildcat and capercaillie, are struggling. Habitats have become fragmented, making it harder for wildlife to thrive and adapt. The State of Nature Scotland report highlights alarming declines across many species groups.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Climate Change</h4>
+					<p>Scotland is already experiencing the impacts of climate change, with warmer, wetter winters and more extreme weather events. Degraded ecosystems are less resilient to these changes and less able to help us mitigate their effects.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Habitat Degradation</h4>
+					<p>Many key habitats are in poor condition. For example, a large percentage of our peatlands are degraded and emitting carbon, rather than storing it. Native woodlands cover only a small fraction of their potential area.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Land Use Pressures</h4>
+					<p>Competing demands on land, including agriculture, forestry, development, and recreation, can put pressure on natural habitats if not managed sustainably.</p>
+				</div>
+			</div>
+			<p class="mt-8 text-2xl">Addressing these challenges requires bold action. Rewilding offers a hopeful and effective approach to tackling the interconnected climate and biodiversity crises head-on.</p>
+		</div>
+	</section>
+	<section class="py-16 sm:py-24 xl:py-32 bg-forest">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl text-white">A Vision for a Wilder Scotland</h3>
+			<p class="mt-8 text-xl text-white">Imagine a future Scotland where nature is recovering, ecosystems are thriving, and people are better connected to the wilder world around them. Rewilding helps us work towards this vision.</p>
+			<p class="mt-8 text-xl text-white">We envision:</p>
+			<ul class="mt-8 space-y-6 text-white">
+				<li class="flex items-start space-x-4">
+					<span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-white"></span>
+					<div>
+						<span class="font-semibold">Expanding Native Woodlands:</span>
+						<span class="text-lg">Forests naturally regenerating and spreading, connecting fragmented habitats and creating corridors for wildlife.</span>
+					</div>
+				</li>
+				<li class="flex items-start space-x-4">
+					<span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-white"></span>
+					<div>
+						<span class="font-semibold">Restored Peatlands:</span>
+						<span class="text-lg">Vast areas of blanket bog rehydrated, actively sequestering carbon and supporting unique wildlife.</span>
+					</div>
+				</li>
+				<li class="flex items-start space-x-4">
+					<span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-white"></span>
+					<div>
+						<span class="font-semibold">Wilder Rivers:</span>
+						<span class="text-lg">Rivers flowing more naturally, creating diverse wetland habitats, reducing flood risk downstream, and boosting fish populations.</span>
+					</div>
+				</li>
+				<li class="flex items-start space-x-4">
+					<span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-white"></span>
+					<div>
+						<span class="font-semibold">Thriving Seas:</span>
+						<span class="text-lg">Coastal habitats like seagrass and oyster reefs restored, supporting healthier fisheries and protecting coastlines.</span>
+					</div>
+				</li>
+				<li class="flex items-start space-x-4">
+					<span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-white"></span>
+					<div>
+						<span class="font-semibold">Functional Ecosystems:</span>
+						<span class="text-lg">Natural processes, like grazing by large herbivores (where appropriate) and predator-prey interactions, shaping dynamic landscapes.</span>
+					</div>
+				</li>
+				<li class="flex items-start space-x-4">
+					<span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-white"></span>
+					<div>
+						<span class="font-semibold">Connected Landscapes:</span>
+						<span class="text-lg">Networks of restored habitats allowing wildlife to move freely and adapt to climate change.</span>
+					</div>
+				</li>
+				<li class="flex items-start space-x-4">
+					<span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-white"></span>
+					<div>
+						<span class="font-semibold">People Reconnected with Nature:</span>
+						<span class="text-lg">Communities actively involved in nature restoration, benefiting from enhanced wellbeing, education, and economic opportunities.</span>
+					</div>
+				</li>
+			</ul>
+			<p class="mt-8 text-xl text-white">This vision isn't about excluding people; it's about finding a better balance where both people and nature can flourish. Achieving this requires collaboration, innovation, and a long-term commitment across Scotland.</p>
+		</div>
+	</section>
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">Growing Support for Rewilding</h3>
+			<p class="mt-8 text-xl">Recognising the urgent need for action, there is growing political and societal support for nature restoration in Scotland. The Scottish Government has declared a climate and nature emergency and set ambitious targets for tackling biodiversity loss.</p>
+			<p class="mt-8 text-xl">Key policy developments include:</p>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+				<div>
+					<h4 class="text-2xl font-semibold">Scottish Biodiversity Strategy</h4>
+					<p>Aims to halt biodiversity loss by 2030 and achieve significant restoration by 2045, explicitly recognising the role of nature restoration and rewilding approaches.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Climate Change Plan</h4>
+					<p>Sets targets for reducing emissions, with nature-based solutions like peatland restoration and woodland creation playing a crucial role.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Land Reform</h4>
+					<p>Ongoing discussions about land ownership and use aim to empower communities and encourage more sustainable land management.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-semibold">Funding Mechanisms</h4>
+					<p>Various government grants, such as the Nature Restoration Fund and Agri-Environment Climate Scheme (AECS), provide financial support for projects that align with rewilding principles (See our Funding and Support section for details).</p>
+				</div>
+			</div>
+			<p class="mt-8 text-xl">While challenges remain in translating policy into widespread action on the ground, the direction of travel is positive. Organisations like NatureScot (Scotland's nature agency), Forestry and Land Scotland, and numerous environmental charities are actively involved in supporting and delivering nature restoration projects.</p>
+			<p class="mt-8 text-xl">This supportive context makes Scotland a prime location for pioneering rewilding initiatives.</p>
+		</div>
+	</section>
+
+	<section class="py-16 sm:py-24 xl:py-32">
+		<div class="content-wrapper">
+			<h3 class="text-5xl font-semibold tracking-tight text-balance 2xl:text-7xl">
+				Could Rewilding Be Right for Your Land?</h3>
+			<p class="mt-8 text-xl">
+				Explore the practical considerations and assess whether rewilding aligns with your goals and the potential of your land.</p>
+			<a href="" class="mt-8 btn btn-lg btn-secondary">
+				Is Rewilding Right for My Land?</a>
+			<a href="" class="mt-8 btn btn-lg btn-secondary">Explore Practical Guides</a>
+		</div>
+	</section>
+{% endblock %}

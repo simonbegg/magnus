@@ -40,6 +40,42 @@ function magnus_enqueue_assets() {
         true
     );
 
+    // Enqueue Glide.js
+    wp_enqueue_script(
+        'glidejs',
+        'https://cdn.jsdelivr.net/npm/@glidejs/glide',
+        [],
+        null,
+        true
+    );
+
+    // Enqueue carousel initialization
+    wp_enqueue_script(
+        'magnus-carousel',
+        get_template_directory_uri() . '/src/js/components/carousel.js',
+        ['glidejs'],
+        filemtime(get_template_directory() . '/src/js/components/carousel.js'),
+        true
+    );
+
+    // Enqueue GSAP
+    wp_enqueue_script(
+        'gsap',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
+        [],
+        null,
+        true
+    );
+
+    // Enqueue interactive diagram script
+    wp_enqueue_script(
+        'interactive-diagram',
+        get_template_directory_uri() . '/src/js/components/interactive-diagram.js',
+        ['gsap'],
+        filemtime(get_template_directory() . '/src/js/components/interactive-diagram.js'),
+        true
+    );
+
     // Enqueue main JavaScript
     wp_enqueue_script(
         'magnus-main',

@@ -1,0 +1,13 @@
+<div class="section-divider">
+	<svg class="w-full h-24 {{ color ? color : 'text-forest' }}{{ reverse ? ' rotate-180' : '' }}" viewbox="0 0 1200 120" preserveaspectratio="none">
+		{% if style == 'wave2' %}
+			{# Wave style 2 - more dramatic curves #}
+			<path d="M0,0 L1200,0 L1200,80 C900,100,600,30,300,80 C200,100,100,90,0,60Z" class="fill-current {{ fillColor ? fillColor : color ? color : 'text-transparent' }}"></path>
+			<path d="M0,60 C100,90,200,100,300,80 C600,30,900,100,1200,80 L1200,120 L0,120Z" class="fill-current"></path>
+		{% else %}
+			{# Default wave style #}
+			<path d="M0,0 L1200,0 L1200,95.8 C1132.19,118.92,1055.71,111.31,985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35Z" class="fill-current {{ fillColor ? fillColor : color ? color : 'text-transparent' }}"></path>
+			<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="fill-current"></path>
+		{% endif %}
+	</svg>
+</div>

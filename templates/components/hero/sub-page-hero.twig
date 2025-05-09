@@ -1,0 +1,26 @@
+<div class="">
+	<div class="relative overflow-hidden isolate rounded-3xl">
+		{% if hero.wpImage is defined and hero.wpImage %}
+			<div class="absolute inset-0 bg-gradient-to-r from-black -z-10"></div>
+			<img src="{{ hero.wpImage }}" alt="{{ hero.alt }}" class="absolute inset-0 object-cover opacity-100 -z-20 size-full">
+		{% else %}
+			<div class="absolute inset-0 -z-10">
+				<div class="absolute inset-0 bg-gradient-to-br from-zinc-900 via-blue-technology/40 to-purple-creative/30"></div>
+				<div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(30,64,175,0.25),transparent_25%)]"></div>
+				<div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(120,53,175,0.25),transparent_25%)]"></div>
+			</div>
+		{% endif %}
+		<div class="flex justify-center items-center max-w-7xl py-32 sm:py-42 2xl:py-56 mx-auto">
+			<div class="text-center">
+				{% if hero.badge is defined and hero.badge %}
+					<span class="inline-flex items-center px-2 py-1 mb-4 text-xs font-medium rounded-md text-gray-50 ring-1 ring-inset ring-gray-50">{{ hero.badge }}</span>
+				{% endif %}
+				<h1 class="text-5xl font-semibold tracking-tight text-white text-balance 2xl:text-7xl">{{ hero.title }}</h1>
+				<p class="max-w-3xl mt-8 text-lg font-medium text-gray-200 text-pretty sm:text-xl/8 mx-auto">{{ hero.description }}</p>
+				{% if hero.link is defined and hero.link is not empty %}
+					<a href="{{ hero.link.url }}" class="mt-8 btn btn-lg btn-secondary mx-auto inline-block">{{ hero.link.text }}</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>

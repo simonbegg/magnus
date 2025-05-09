@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./components/layout.css";
 @import "./components/buttons.css";
+@import "./components/carousel.css";
 
 /* Custom base styles */
 @layer base {

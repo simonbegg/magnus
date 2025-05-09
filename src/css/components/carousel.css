@@ -1,0 +1,59 @@
+.glide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.glide__arrow:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.glide__arrow--left {
+    left: -1.5rem;
+}
+
+.glide__arrow--right {
+    right: -1.5rem;
+}
+
+.glide__bullets {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.glide__bullet {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.glide__bullet:hover,
+.glide__bullet--active {
+    background-color: #6b7280;
+}
+
+.glide__slide {
+    height: 100%;
+}
+
+.glide__slides {
+    height: auto !important;
+}
+
+.glide__track {
+    padding: 1rem 0;
+}

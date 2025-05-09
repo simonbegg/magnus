@@ -1,13 +1,13 @@
 .btn {
-  @apply px-6 py-2 rounded-full tracking-wider font-medium inline-block text-white transition-all duration-300 bg-[#368BEF] hover:bg-[#2A70C0] text-base;
+  @apply px-6 py-2 rounded-full tracking-wider font-medium inline-block text-white transition-all duration-300 bg-primary hover:bg-primary/80 text-base;
 }
 
 /* Button colors - only needed when overriding the primary default */
 .btn-secondary {
-  @apply bg-primary hover:bg-secondary;
+  @apply bg-secondary hover:bg-secondary/80;
 }
 .btn-tertiary {
-  @apply bg-forest hover:bg-[#6B8231];
+  @apply bg-forest hover:bg-forest/80;
 }
 
 /* Button sizes - only needed when overriding the medium default */
@@ -25,11 +25,11 @@
 
 /* Outline variations */
 .btn-outline {
-  @apply border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-white;
+  @apply border-2 border-primary bg-transparent text-primary hover:bg-primary/80 hover:text-white;
 }
 .btn-outline-secondary {
-  @apply border-2 border-secondary bg-transparent text-secondary hover:bg-secondary hover:text-white;
+  @apply border-2 border-secondary bg-transparent text-secondary hover:bg-secondary/80 hover:text-white;
 }
 .btn-outline-tertiary {
-  @apply border-2 border-forest bg-transparent text-forest hover:bg-forest hover:text-white;
+  @apply border-2 border-forest bg-transparent text-forest hover:bg-forest/80 hover:text-white;
 }

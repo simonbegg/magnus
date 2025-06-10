@@ -1,13 +1,28 @@
 {% extends "/scaffolding/base.twig" %}
 
 {% block content %}
-	<div class="mx-auto max-w-7xl py-32">
-		<h1 class="text-7xl font-bold text-gray-900 mb-8">Retro Sci-Fi</h1>
-		<p class="text-gray-600 mb-8">Retro sci-fi refers to science fiction that evokes the style, aesthetics, and imaginative visions of the future as seen through the lens of past eras, particularly the mid-20th century. It captures the optimism, sleek designs, vibrant colors, and technological fantasies popularized in the 1950s through the 1970s, often featuring ray guns, rocket ships, robots, and futuristic cities. Retro sci-fi blends nostalgia with imaginative storytelling, reimagining vintage concepts of the future while exploring themes of human innovation, exploration, and adventure.</p>
-		<div class="flex space-x-8">
-			<img src="{{ theme.path }}/dist/images/blog/Futuristic Interior with Arched Doorways.jpeg" alt="Futuristic Interior with Arched Doorways" class="rounded-3xl h-80 object-cover">
-			<img src="{{ theme.path }}/dist/images/blog/arcade.jpg" alt="Arcade" class="rounded-3xl h-80 object-cover">
-			<img src="{{ theme.path }}/dist/images/blog/humanoid.jpg" alt="Humanoid" class="rounded-3xl h-80 object-cover">
+	{% include "/components/hero/front-page-hero.twig" %}
+	<section class="py-24 bg-slate-100" id="content">
+		<div class="content-wrapper">
+			<div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+				<div class="bg-white rounded-3xl text-center shadow-2xl p-8">
+					<img class="rounded-2xl h-96 w-full object-cover" src="{{ theme.path }}/dist/images/homepage_card.jpg" alt="">
+					<h2 class="font-semibold text-2xl h-16 mt-8">The Genesis of Tomorrow's Yesterday</h2>
+					<p class="text-lg mt-2">Delve into the origins of retro sci-fi, a genre born from past visions of the future. Discover how early science fiction writers and artists laid the groundwork for this captivating aesthetic, imagining worlds that now feel both nostalgic and strangely prescient.</p>
+				</div>
+				<div class="bg-white rounded-3xl text-center shadow-2xl p-8">
+					<img class="rounded-2xl h-96 w-full object-cover" src="{{ theme.path }}/dist/images/homepage_card_2.jpg" alt="">
+					<h2 class="font-semibold text-2xl h-16 mt-8">Chrome, Neon & Cosmic Dreams</h2>
+					<p class="text-lg mt-2">Explore the iconic visual language of retro sci-fi. From gleaming chrome spaceships and neon-drenched cityscapes to analog interfaces and raygun-toting heroes, we break down the common tropes and design elements that define this distinctive style.</p>
+				</div>
+				<div class="bg-white rounded-3xl text-center shadow-2xl p-8">
+					<img class="rounded-2xl h-96 w-full object-cover" src="{{ theme.path }}/dist/images/homepage_card_3.jpg" alt="">
+					<h2 class="font-semibold text-2xl h-16 mt-8">Echoes of the Future Past</h2>
+					<p class="text-lg mt-2">Uncover the enduring cultural impact of retro sci-fi. See how its themes and aesthetics continue to inspire contemporary art, film, fashion, and games, proving that these visions of bygone futures still resonate powerfully today.</p>
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
+
+
 {% endblock %}

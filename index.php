@@ -8,6 +8,7 @@
 use Timber\Timber;
 
 $context = Timber::context();
-$context['post'] = Timber::get_post();
+$timber_post = Timber::get_post();
+$context['post'] = $timber_post;
 
-Timber::render('index.twig', $context);
+Timber::render(array('page-' . $timber_post->post_name . '.twig', 'index.twig', 'page.twig'), $context);

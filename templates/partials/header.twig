@@ -1,24 +1,24 @@
 <header class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center py-6">
-            <div class="flex-shrink-0">
-                <a href="{{ site.url }}" class="text-2xl font-bold text-gray-900 font-urbanist">
-                    {{ site.title }}
-                </a>
-            </div>
-            <nav>
-                {% if menu %}
-                    <ul class="flex space-x-8">
-                        {% for item in menu.items %}
-                            <li>
-                                <a href="{{ item.link }}" class="text-gray-600 hover:text-gray-900">
-                                    {{ item.title }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </nav>
-        </div>
-    </div>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex justify-between items-center py-6">
+			<div class="flex-shrink-0">
+				<a href="{{ site.url }}" class="text-2xl font-bold text-gray-900 font-urbanist">
+					{{ site.title }}
+				</a>
+			</div>
+			<nav>
+				{% if menu_main %}
+					<ul class="flex space-x-8">
+						{% for item in menu_main.items %}
+							<li>
+								<a href="{{ item.link }}" class="text-gray-600 hover:text-gray-900">
+									{{ item.title }}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</nav>
+		</div>
+	</div>
 </header>

@@ -40,6 +40,15 @@ function magnus_enqueue_assets() {
         true
     );
 
+    // Enqueue GSAP
+    wp_enqueue_script(
+        'gsap',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
+        [],
+        null,
+        true
+    );
+
     // Enqueue main JavaScript
     wp_enqueue_script(
         'magnus-main',

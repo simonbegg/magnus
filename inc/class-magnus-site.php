@@ -5,6 +5,9 @@
  * @package Magnus
  */
 
+
+// Timber setup
+use Timber\Timber;
 use Timber\Site;
 use Timber\Menu;
 
@@ -43,12 +46,7 @@ class Magnus_Site extends Site {
         $context['site'] = $this;
 
         // Add menus if they exist
-        if (has_nav_menu('primary-menu')) {
-            $context['primary_menu'] = new Menu('primary-menu');
-        }
-        if (has_nav_menu('footer-menu')) {
-            $context['footer_menu'] = new Menu('footer-menu');
-        }
+        $context['menu_main'] = Timber::get_menu('main');
 
         // Add theme settings
         $context['theme'] = [
@@ -110,8 +108,7 @@ class Magnus_Site extends Site {
      */
     public function register_menus() {
         register_nav_menus([
-            'primary-menu' => __('Primary Menu', 'magnus'),
-            'footer-menu'  => __('Footer Menu', 'magnus'),
+            'main' => 'Primary Menu'
         ]);
     }
 
